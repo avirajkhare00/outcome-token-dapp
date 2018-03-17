@@ -2,8 +2,9 @@
   <div class="dashboard">
     <h1>{{ msg }}</h1>
     <div>
-      <input v-model="outcomeName">
-      <input v-on:click="addOutcomeToken" id="AddOutcomeBtn" type="button" value="Add Outcome Token" :disabled="isDisabled">
+      Name: <input v-model="outcomeName">
+      <v-btn color="primary" v-on:click="addOutcomeToken" id="AddOutcomeBtn" :disabled="isDisabled">Add Outcome Token</v-btn>
+      <v-btn color="primary">Test</v-btn>
       <ul>
         <li v-for="outcomeAddress in outcomes" :key="outcomeAddress.id">
             <OutcomeItem :address="outcomeAddress"></OutcomeItem>
@@ -19,6 +20,7 @@
 import OutcomeToken from "@/js/outcometoken.js"
 import Voting from "@/js/voting.js"
 import OutcomeItem from "@/components/OutcomeItem.vue"
+
 
 export default {
   name: "dashboard",

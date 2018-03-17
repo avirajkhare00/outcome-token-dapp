@@ -30,7 +30,7 @@
                 <p>
                     Amount: <input v-model="transferValue"><br>
                     <br>
-                    To: <input v-model="recipient"><br>
+                    To address: <input v-model="recipient"><br>
                     <br>
                     <input type="button" value="Submit" @click="redeem()">
                 </p>
